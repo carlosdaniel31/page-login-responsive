@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+  <title>Tela de Login</title>
+</head>
+<body>
+  <div id="page" class="flex">
+    <div>
+      <header>
+        <img src="./assets/logo.svg" alt="Logo">
+      </header>
+      <main>
+        <div class="headline">
+          <h1>Acesse a plataforma</h1>
+          <p>Faça login ou registre-se para começar a construir seus projetos ainda hoje.</p>
+        </div>
+        <form>
+          <div class="input-wrapper">
+            <label for="email">E-mail</label>
+            <input 
+              type="text" 
+              name="email" 
+              id="email" 
+              placeholder="Digite seu e-mail"
+              required 
+            />
+          </div>
+          <div class="input-wrapper">
+            <div class="label-wrapper flex">
+              <label for="senha">Senha</label>
+              <a href="#">Esqueceu a senha?</a>
+            </div>
+            <input 
+              type="password" 
+              id="senha" 
+              placeholder="Digite sua senha"
+            />
+            <img class="eye show-password" src="./assets/eye-off.svg" alt="Ícone de um olho fechado">
+            <img class="eye hide-password hide" src="./assets/eye.svg" alt="Ícone de um olho aberto">
+          </div>
+          <button type="submit">Entrar</button>
+          <div class="create-account">
+            Ainda não tem uma conta? <a href="#">Inscreva-se</a>
+          </div>
+        </form>
+      </main>
+    </div>
+    <img src="./assets/image.jpg" alt="">
+  </div>
+</body>
+</html>

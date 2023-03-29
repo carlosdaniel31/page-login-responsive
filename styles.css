@@ -1,0 +1,179 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.6rem;
+  font-family: "Titillium Web", sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: #7c3aed;
+  font-weight: 700;
+}
+
+.flex{
+  display: flex;
+}
+
+#page{
+  height: 100vh;
+}
+
+#page > *{ /*PEGUE O PRIMEIRO NÍVEL DE FILHOS DA #PAGE, NO CASO A DIV COM HEADER E MAIN E A IMAGEM*/
+  width: 50%;
+}
+ 
+img{
+  width: 100%;
+  object-fit: cover;
+}
+
+header img{
+  width: 16rem;
+  height: 5.4rem;
+}
+
+#page > div{
+  padding: 4rem 11.2rem;
+}
+
+main{
+  margin-top: 4rem;
+}
+
+.headline{
+  max-width: 36rem;
+}
+
+h1{
+  font-size: 3.6rem;
+  color: #1e293b;
+}
+
+p{
+  color: #475569;
+  margin-top: 1.4rem;
+}
+
+form{
+  margin-top: 3.6rem;
+}
+
+label{
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #1e293b;
+}
+
+label + a{
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+input{
+  width: 100%;
+  background: #fff;
+  border: 0.1rem solid #e2e8f0;
+  border-radius: 0.4rem;
+  padding: 1.6rem 1.2rem;
+  margin-top: 0.8rem;
+}
+
+input:focus,
+input:hover{
+  border: 1.2px solid #7c3aed;
+  outline: 0;
+}
+
+input::placeholder{
+  font-size: 1.4rem;
+  color: #94a3b8;
+}
+
+form .input-wrapper + .input-wrapper{ /*PEGUE O .input-wrapper QUE TEM UM .input-wrapper ANTES DELE*/
+  margin-top: 1.6rem;
+  position: relative;
+}
+
+.label-wrapper{
+  justify-content: space-between;
+}
+
+::-ms-reveal{ /*ESSE RECURSO ATIVA/DESATIVA O ÍCONE DE OLHO NO MICROSOFT EDGE*/
+  display: none;
+}
+
+.eye{
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  cursor: pointer;
+}
+
+.hide{
+  display: none;
+}
+
+form button{
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem 2.4rem;
+  background: #7c3aed;
+  border-radius: 4px;
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+  margin-block: 3.2rem; /*MARGEM CIMA/BAIXO*/
+  box-sizing: border-box;
+}
+
+form button:focus{
+  outline: 2px solid #000;
+  border-radius: 0.2rem;
+}
+
+form button:hover{
+  background: #9f67ff;
+}
+
+.create-account{
+  color: #475569;
+}
+
+@media(max-width: 900px){
+  #page > *{
+    width: 100%;
+  }
+
+  #page > img{
+    display: none;
+  }
+
+  #page > div{
+    padding: 11rem;
+  }
+
+  main{
+    max-width: 100%;
+  }
+}
+
+@media(max-width: 600px){
+  #page > div{
+    padding: 4rem;
+  }
+}
